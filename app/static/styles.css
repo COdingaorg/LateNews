@@ -29,3 +29,17 @@ h1, h2{
 hr{
   border-width: 4px;
 }
+.col-md-4{
+  margin-top: 6px;
+}
+.row{
+  width: 96%;
+  margin-left: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.category{
+  text-align: right;
+}
