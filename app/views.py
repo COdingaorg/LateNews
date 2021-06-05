@@ -1,7 +1,7 @@
 from flask.templating import render_template
 from app import app
 
-app.route('/')
+@app.route('/')
 def index():
   '''
   function that displays the landing page
