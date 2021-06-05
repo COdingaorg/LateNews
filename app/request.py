@@ -1,3 +1,4 @@
+from app.instance.config import API_KEY
 from app import app
 import urllib.request, json
 from .models import ArticlesClass
@@ -7,7 +8,7 @@ Articles = ArticlesClass.Articles
 Sources = SourcesClass.Sources
 
 #Getting Api key
-api_key = app.config['API_KEY']
+api_key = API_KEY
 
 #Getting base url
 source_url = app.config['SOURCES_API']
