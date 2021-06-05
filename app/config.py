@@ -16,4 +16,4 @@ class DevConfig(Config):
   Configurations for development
   '''
   
-Debug = True
+  Debug = True

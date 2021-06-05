@@ -9,6 +9,6 @@ def index():
   '''
   function that displays the landing page
   '''
-  heading = 'Welcome to Late News-<hr> Never miss a moment'
+  heading = 'Welcome to Late News-''Never miss a moment'
 
   return render_template('index.html', title = heading, sourceList = sourcesSamples)
