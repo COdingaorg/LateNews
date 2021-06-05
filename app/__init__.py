@@ -9,7 +9,7 @@ app.config.from_object(DevConfig)
 app.config.from_pyfile('config.py')
 
 #initializing bootstrap
-Bootstrap(app)
+bootstrap = Bootstrap(app)
 
 from app import views
 from app import errors
