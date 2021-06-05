@@ -1,3 +1,4 @@
+from _typeshed import IdentityFunction
 from app.instance.config import API_KEY
 from app import app
 import urllib.request, json
@@ -47,6 +48,30 @@ def process_results(sources_fetched_list):
     
     new_source = Sources(identification, name, description, url, category, language, country)
     source_results_list.append(new_source)
-  return source_results_list
+    src_id = identification
+  return source_results_list, src_id
 
+
+def get_source_articles(source_id):
+  '''
+  function that gets articles from a given source
+  '''
+  
+  get_articles = source_articles_url.format(source_id)
+  with urllib.request.urlopen(get_articles) as url:
+    articles_response = url.read()
+    articles_response_readable = json.loads(articles_response)
+    articles_results = None
+
+    if articles_response_readable['articles']:
+      get_articles_list = articles_response_readable['articles']
+      articles_results = process_articles(get_articles_list)
+
+  return articles_results
+
+def process_articles(get_articles_list):
+  '''
+  function that gets data from api response
+  '''
+  
 
