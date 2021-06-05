@@ -7,4 +7,5 @@ def index():
   function that displays the landing page
   '''
   title = 'Welcome to Late News- Never miss a moment'
+  print(title)
   return render_template('index.html', title = title)
