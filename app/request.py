@@ -73,5 +73,17 @@ def process_articles(get_articles_list):
   '''
   function that gets data from api response
   '''
-  
+  articles_list = []
+  for article in get_articles_list:
+    author = article.get('author')
+    title = article.get('title')
+    description = article.get('description')
+    url = article.get('url')
+    image = article.get('urlToImage')
+    date = article.get('publishedAt')
+    content = article.get('content')
 
+    new_article = Articles(author, title, description, url, image, date, content)
+    articles_list.append(new_article)
+
+  return articles_list
