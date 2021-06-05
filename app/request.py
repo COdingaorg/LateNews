@@ -30,9 +30,22 @@ def get_sources():
 
   return sources_results
 
-
-
-
-
+def process_results(sources_fetched_list):
+  '''
+  getting data from the json file and storing them in a variable
+  '''
+  source_results_list = []
+  for source in sources_fetched_list:
+    identification = source.get('id')
+    name = source.get('name')
+    description = source.get('description')
+    url = source.get('url')
+    category = source.get('category')
+    language = source.get('language')
+    country = source.get('country')
+    
+    new_source = Sources(identification, name, description, url, category, language, country)
+    source_results_list.append(new_source)
+  return source_results_list
 
 
