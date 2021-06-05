@@ -17,7 +17,7 @@ class TestSources(unittest, TestCase):
     self.new_source = Sources('aljaseera','Al-Jazeera', 'description', 'url link', 'news category', 'language', 'country of origin')
     self.new_article = Articles('author', 'title', 'description', 'url', 'image_url', 'publishedAt', 'content')
 
-  def test_classInstance(self):
+  def test_sourcesinstance(self):
     '''
     test is a source instance is created
     '''
@@ -27,7 +27,7 @@ class TestSources(unittest, TestCase):
     '''
     tests if an articles instance is created
     '''
-    self.assertTrue(isinstance(self.new_article, Articles))
+    self.assertTrue(isinstance(self.new_article, Articles)) 
 
 if __name__ =='__main__':
     unittest.main()
