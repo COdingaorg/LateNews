@@ -1,2 +1,8 @@
-<h1>{{title}}</h1>
-<h2>Hello world</h2>
+{%extends 'bootstrap/base.html'%}
+{%block navbar%}
+  {{super()}}
+  <button class="btn btn-warning">Bookmark</button>
+{%endblock%}
+{%block content%}
+  {{title}}
+{%endblock%}
