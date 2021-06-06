@@ -23,6 +23,14 @@
   border-radius: 10px;
   box-shadow: 2px 2px 5px 2px grey;
 }
+.articles{
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 2px grey;
+  margin-top: 20px;
+  width: 86%;
+  padding: 0%;
+}
 h1, h2{
   text-align: center;
 }
@@ -32,7 +40,7 @@ hr{
 .col-md-4{
   margin-top: 6px;
 }
-.row{
+.sources{
   width: 96%;
   margin-left: 2px;
   display: flex;
@@ -45,4 +53,40 @@ hr{
 }
 .hide{
   display: none;
+}
+.slider{
+  height: 300px;
+  background-image: url('../static/images/trainLate.jpeg');
+  background-size: 80%;
+  background-position-y: 85%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+a.nav-item{
+  color: white;
+}
+img{
+  width: 100%;
+  
+}
+#articlesShow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.articles>.col-md-4{
+  padding: 0;
+}
+.articles>.col-md-8{
+  padding: auto;
+  padding-top: 5px;
+}
+cite{
+  text-align: center;
+}
+.content{
+  padding: 4px;
+  border-radius: 5px;
 }

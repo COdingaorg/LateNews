@@ -1,18 +1,17 @@
-{%extends 'bootstrap/base.html'%}
 {%extends 'base.html'%}
 {%block head%}
 {{super()}}
 
-<link rel="stylesheet" href="../static/styles.css">
 {%endblock%}
-{%block navbar%}
-{{super()}}
 
-{%endblock%}
 {%block content%}
-<h1>{{title}}</h1>
-
-<div class="row">
+<div class="slider">
+  <h1>{{title}}</h1>
+<p>{{subhead}}</p>
+</div>
+<h4>News Sources: <hr></h4>
+<div class="row sources">
+  
   {%for source in sourceList%}
   <div class="col-md-4 col-sm-6">
     <div class="card">

@@ -9,9 +9,10 @@ def index():
   '''
   function that displays the landing page
   '''
-  heading = 'Welcome to Late News-''Never miss a moment'
+  heading = 'Welcome to Late News'
+  subheading = 'Never miss a moment'
   sourcesSamples = get_sources()
-  return render_template('index.html', title = heading, sourceList = sourcesSamples)
+  return render_template('index.html', title = heading, sourceList = sourcesSamples, subhead = subheading)
 
 @app.route('/source', methods = ['GET', 'POST'])
 def source_articels():
