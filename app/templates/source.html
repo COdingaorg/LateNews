@@ -7,10 +7,11 @@
       <img src="{{article.image}}" alt="{{article.title}}+'image'">
     </div>
     <div class="col-md-8">
-      <h5>{{article.title}}</h5>
+      <h5 class="bg-light">{{article.title}}</h5>
       <span>Summary : </span><small>{{article.description}}</small>
       <div class="content bg-light">
-        <p>{{article.content}}</p>
+        <p>{{article.content}} <a href="{{article.url}}" target="_blank">ReadMore...</a></p>
+
       </div>
       <cite>Published at : {{article.date}}</cite>
     </div>

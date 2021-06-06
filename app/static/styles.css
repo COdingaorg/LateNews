@@ -86,7 +86,7 @@ img{
 cite{
   text-align: center;
 }
-.content{
+.content,.bg-light{
   padding: 4px;
   border-radius: 5px;
 }
