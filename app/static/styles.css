@@ -43,3 +43,6 @@ hr{
 .category{
   text-align: right;
 }
+.hide{
+  display: none;
+}
