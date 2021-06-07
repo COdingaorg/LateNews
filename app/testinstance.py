@@ -1,10 +1,10 @@
 import unittest
 from unittest.case import TestCase
-from app.models import SourcesClass
-from app.models import ArticlesClass
+from .models import Sources
+from .models import Articles
 
-Sources = SourcesClass.Sources
-Articles = ArticlesClass.Articles
+Sources = Sources
+Articles = Articles
 
 class TestSources(unittest, TestCase):
   '''

@@ -1,18 +1,21 @@
 from app.instance.config import API_KEY
 from app import app
 import urllib.request, json
-from .models import ArticlesClass
-from .models import SourcesClass
+from .models import Articles
+from .models import Sources
 
-Articles = ArticlesClass.Articles
-Sources = SourcesClass.Sources
+Articles = Articles
+Sources = Sources
 
 #Getting Api key
 api_key = API_KEY
+source_url = None
+source_articles_url = None
 
 #Getting base url
-source_url = app.config['SOURCES_API']
-source_articles_url = app.config['SOURCE_NEWS_API']
+def configure_request(app):
+  source_url = app.config['SOURCES_API']
+  source_articles_url = app.config['SOURCE_NEWS_API']
 
 #get sources from api
 def get_sources():
