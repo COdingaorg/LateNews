@@ -1,7 +1,7 @@
 import unittest
 from unittest.case import TestCase
-from .models import Sources
-from .models import Articles
+from app.models import Sources
+from app.models import Articles
 
 Sources = Sources
 Articles = Articles
@@ -29,5 +29,3 @@ class TestSources(unittest, TestCase):
     '''
     self.assertTrue(isinstance(self.new_article, Articles)) 
 
-if __name__ =='__main__':
-    unittest.main()

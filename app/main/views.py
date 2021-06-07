@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request
-from app import app
-from .requests import get_sources, get_source_articles
-from app import requests
+from . import main
+from ..requests import get_sources, get_source_articles
 
 
-@app.route('/')
+@main.route('/')
 def index():
   '''
   function that displays the landing page
@@ -14,7 +13,7 @@ def index():
   sourcesSamples = get_sources()
   return render_template('index.html', title = heading, sourceList = sourcesSamples, subhead = subheading)
 
-@app.route('/source', methods = ['GET', 'POST'])
+@main.route('/source<id>', methods = ['GET', 'POST'])
 def source_articels():
   '''
   function that displays source articles
