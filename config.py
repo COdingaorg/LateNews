@@ -1,9 +1,13 @@
+from app.instance.config import API_KEY
+import os 
 class Config:
   '''
   General configuraions
   '''
   SOURCE_NEWS_API = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'
   SOURCES_API = 'https://newsapi.org/v2/sources?apiKey={}'
+  API_KEY = os.environ.get('API_KEY')
+
 
 class ProdConfig(Config):
   '''
@@ -17,3 +21,8 @@ class DevConfig(Config):
   '''
   
   Debug = True
+
+config_options = {
+  'development':DevConfig,
+  'production':ProdConfig
+}
