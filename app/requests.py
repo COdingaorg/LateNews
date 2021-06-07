@@ -87,5 +87,4 @@ def process_articles(get_articles_list):
 
     new_article = Articles(author, title, description, url, image, date, content)
     articles_list.append(new_article)
-
   return articles_list
