@@ -64,8 +64,10 @@ hr{
   align-items: center;
   justify-content: center;
 }
-a.nav-item{
+.link{
   color: white;
+  font-size: 1.2em;
+  font-weight: 800;
 }
 img{
   width: 100%;
