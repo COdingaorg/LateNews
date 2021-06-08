@@ -66,7 +66,6 @@ testresources==2.0.1
 toml==0.10.2
 tornado==6.1
 traitlets==5.0.5
-ufw==0.36
 urllib3==1.25.8
 virtualenv==20.4.7
 visitor==0.1.3
