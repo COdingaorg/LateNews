@@ -7,23 +7,27 @@
 {%block content%}
 <div class="slider">
   <h1>{{title}}</h1>
-<p>{{subhead}}</p>
+  <p>{{subhead}}</p>
 </div>
-<h4>News Sources: <hr></h4>
+<h4>News Sources:
+  <hr>
+</h4>
 <div class="row sources">
-  
+
   {%for source in sourceList%}
   <div class="col-md-4 col-sm-6">
     <div class="card">
       <div class="card-body">
         <h3 class="card-title">{{source.name}}</h3>
         <hr>
-        <p class="card-text">{{source.description}}</p>
-        <hr>
-          <a href="/source/{{source.id}}"><button class="btn btn-warning" >Read Stories</button></a><span class="category"> | Category:
+        <form action="http://127.0.0.1:5000/source" method="POST">
+          <input class='hide' type='text' name='id' value="{{source.id}}">
+          <a href="/source-articles"></a><button type='submit' class="btn btn-warning">Read Stories</button></a><span
+            class="category"> | Category:
             {{source.category}}</span>
 
           <div class="card-footer">
+        </form>
         <small class="card-title">country :{{source.country}} | language: {{source.language}}</small><br>
         <a class="card-text" href="{{source.url}}"><i>Source Website</i></a>
       </div>
