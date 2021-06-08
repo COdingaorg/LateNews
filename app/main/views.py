@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
 from . import main
 from ..requests import get_sources, get_source_articles
 
@@ -13,14 +13,13 @@ def index():
   sourcesSamples = get_sources()
   return render_template('index.html', title = heading, sourceList = sourcesSamples, subhead = subheading)
 
-@main.route('/source/<id>', methods = ['GET', 'POST'])
+@main.route('/source/<str:sid>')
 def source_articels():
   '''
   function that displays source articles
   '''
-  if request.method == 'POST':
-    src_id = request.form['id']
 
-  articles = get_source_articles(src_id)
+  articles = get_source_articles({}).format(sid)
 
   return render_template('source.html', articleList = articles)
+
