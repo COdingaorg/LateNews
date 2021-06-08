@@ -13,7 +13,7 @@ def index():
   sourcesSamples = get_sources()
   return render_template('index.html', title = heading, sourceList = sourcesSamples, subhead = subheading)
 
-@main.route('/source<id>', methods = ['GET', 'POST'])
+@main.route('/source/<id>', methods = ['GET', 'POST'])
 def source_articels():
   '''
   function that displays source articles

@@ -1,4 +1,4 @@
-#!/home/moringa/CORE/PythonProjects/LateNews/virtual/bin/python
+#!/home/moringa/CORE/PythonProjects/LateNews/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

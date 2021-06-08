@@ -1,5 +1,4 @@
 from app.instance.config import API_KEY
-from app import app
 import urllib.request, json
 from .models import Articles
 from .models import Sources
@@ -14,6 +13,7 @@ source_articles_url = None
 
 #Getting base url
 def configure_request(app):
+  global api_key, source_articles_url, source_url
   source_url = app.config['SOURCES_API']
   source_articles_url = app.config['SOURCE_NEWS_API']
 

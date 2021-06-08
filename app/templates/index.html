@@ -22,7 +22,7 @@
         <hr>
         <form action="http://127.0.0.1:5000/source" method="POST">
           <input class='hide' type='text' name='id' value="{{source.id}}">
-          <a href="/source"></a><button type='submit' class="btn btn-warning" >Read Stories</button></a><span class="category"> | Category:
+          <a href="/source/{{source.id}}"></a><button type='submit' class="btn btn-warning" >Read Stories</button></a><span class="category"> | Category:
             {{source.category}}</span>
 
           <div class="card-footer">
