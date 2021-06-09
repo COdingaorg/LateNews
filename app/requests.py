@@ -1,4 +1,3 @@
-from app.instance.config import API_KEY
 import urllib.request, json
 from .models import Articles
 from .models import Sources
