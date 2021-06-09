@@ -27,13 +27,16 @@ A user reads an articles and get redirected to source website
 <img src="app/static/images/articles.png">
 
 ## Installation
-Have Python installed in you machine.
+For correct version requirements installation, check the requirements.txt
+
+Have Python installed in you machine.- the version used for this project is 3.8.5
 
 install pip
 
 install and activate virtual environment
 
 install flask in the virtual environment
+  < version used flask1.0.2 >
 
 Use git, Github and any editor or IDE to see the codes and the rendered frontend.
 
@@ -49,7 +52,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Website's link
-This aplication is hosted heroku. Website Link is 
+This aplication is hosted heroku. Website Link is https://latenews.herokuapp.com/
 
 ## License
 This Website uses MIT LICENSE. For more Read License.
