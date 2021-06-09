@@ -7,13 +7,14 @@ Articles = Articles
 Sources = Sources
 
 #Getting Api key
-api_key = API_KEY
+API_KEY = None
 source_url = None
 source_articles_url = None
 
 #Getting base url
 def configure_request(app):
   global api_key, source_articles_url, source_url
+  api_key = app.config['API_KEY']
   source_url = app.config['SOURCES_API']
   source_articles_url = app.config['SOURCE_NEWS_API']
 
