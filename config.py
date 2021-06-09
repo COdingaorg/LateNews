@@ -1,4 +1,3 @@
-from app.instance.config import API_KEY
 import os 
 class Config:
   '''
